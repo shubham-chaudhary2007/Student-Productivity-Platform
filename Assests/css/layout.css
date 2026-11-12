@@ -35,7 +35,7 @@ body {
     grid-template-columns: minmax(120px, 1fr) minmax(220px, 300px) minmax(0, 1fr);
     align-items: center;
     gap: clamp(18px, 2.5vw, 36px);
-    background: #fff;
+    background: #f7ffed;
     border: 1px solid #deded8;
     border-radius: 999px;
     box-shadow: 0 8px 24px rgb(23 35 28 / 8%);
@@ -299,6 +299,6 @@ footer > div:last-of-type a:hover {
     }
 
     footer {
-        padding: 25px 6%;
+        padding: 25px 0;
     }
 }

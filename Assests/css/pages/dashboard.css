@@ -185,7 +185,116 @@ main {
     font-size: 14px;
 }
 
+/* ----------study-cta----------  */
 
+.study-cta {
+    width: 100%;
+    padding: 82px 24px 88px;
+    background: #191919;
+    color: #f7f6f1;
+    scroll-margin-top: 110px;
+}
+
+.study-cta-content {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 72px);
+}
+
+.study-cta-copy {
+    min-width: 0;
+}
+
+.study-cta-image {
+    display: block;
+    width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+.study-cta h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 58px);
+    font-weight: 400;
+    line-height: 1.04;
+}
+
+.study-cta p {
+    font-family:  serif;
+    margin: 64px 0 68px;
+    color: #B2B1A9;
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+.study-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.study-cta-primary,
+.study-cta-login {
+    min-height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f7f6f1;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.study-cta-primary {
+    min-width: 244px;
+    gap: 16px;
+    padding: 0 32px;
+    background: #f7f6f1;
+    color: #111;
+}
+
+.study-cta-primary span {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.study-cta-login {
+    min-width: 138px;
+    padding: 0 32px;
+    background: transparent;
+    color: #f7f6f1;
+    cursor: pointer;
+}
+
+.study-cta-primary:hover,
+.study-cta-login:hover {
+    transform: translateY(-2px);
+}
+
+.study-cta-primary:hover {
+    background: #91ca8d;
+    border-color: #91ca8d;
+}
+
+.study-cta-login:hover {
+    background: #f7f6f1;
+    color: #111;
+}
+
+.study-cta-primary:focus-visible,
+.study-cta-login:focus-visible {
+    outline: 2px solid #91ca8d;
+    outline-offset: 4px;
+}
+
+/* ---------FAQ---------- */
 
 .faq-section {
     width: 100%;
@@ -354,6 +463,15 @@ main {
     background: #F1F8E9;
     color: #171717;
     text-decoration: none;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-detail:hover,
+.contact-detail:focus-visible {
+    transform: translateY(-3px);
+    border-color: #91CA8D;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 18%);
+    outline: none;
 }
 
 .contact-detail-icon {
@@ -370,6 +488,12 @@ main {
     width: 23px;
     height: 23px;
     object-fit: contain;
+    transition: transform 180ms ease;
+}
+
+.contact-detail:hover .contact-detail-icon img,
+.contact-detail:focus-visible .contact-detail-icon img {
+    transform: scale(1.12);
 }
 
 .contact-detail-label,
@@ -412,6 +536,15 @@ main {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-social-links a:hover,
+.contact-social-links a:focus-visible {
+    transform: translateY(-3px);
+    background: #91CA8D;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 22%);
+    outline: none;
 }
 
 .contact-social-links img {
@@ -419,6 +552,12 @@ main {
     width: 20px;
     height: 20px;
     object-fit: contain;
+    transition: transform 180ms ease;
+}
+
+.contact-social-links a:hover img,
+.contact-social-links a:focus-visible img {
+    transform: scale(1.12);
 }
 
 .contact-form {
@@ -449,6 +588,7 @@ main {
     color: #171717;
     font: inherit;
     font-size: 13px;
+    transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
 .contact-field textarea {
@@ -456,10 +596,18 @@ main {
     resize: vertical;
 }
 
+.contact-field input:hover,
+.contact-field textarea:hover {
+    border-color: #6BAA67;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgb(145 202 141 / 18%);
+}
+
 .contact-field input:focus,
 .contact-field textarea:focus {
-    border-color: #5b2ae8;
-    outline: 2px solid rgb(91 42 232 / 18%);
+    border-color: #4F914B;
+    outline: 2px solid rgb(79 145 75 / 20%);
+    background: #fff;
 }
 
 .contact-submit {
@@ -543,6 +691,56 @@ main {
         gap: 38px;
     }
 
+    .study-cta {
+        padding: 64px 24px 68px;
+    }
+
+    .study-cta-content {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        gap: 20px;
+    }
+
+    .study-cta-image {
+        width: 100%;
+        max-height: 220px;
+        justify-self: center;
+    }
+
+    .study-cta h2 {
+        font-size: clamp(30px, 6vw, 44px);
+    }
+
+    .study-cta p {
+        margin: 30px 0 34px;
+        font-size: 16px;
+    }
+
+    .study-cta-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .study-cta-primary,
+    .study-cta-login {
+        min-height: 56px;
+        font-size: 15px;
+    }
+
+    .study-cta-primary {
+        min-width: 0;
+        gap: 8px;
+        padding: 0 18px;
+    }
+
+    .study-cta-login {
+        min-width: 0;
+        padding: 0 18px;
+    }
+
+    .study-cta-primary span {
+        font-size: 20px;
+    }
+
     .contact-section {
         width: 100%;
         padding: 64px 24px;
@@ -556,5 +754,40 @@ main {
 
     .contact-form {
         padding: 22px;
+    }
+}
+
+@media (max-width: 440px) {
+    .study-cta-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .study-cta-image {
+        width: min(100%, 520px);
+        max-height: 240px;
+    }
+
+    .study-cta h2 {
+        font-size: clamp(38px, 10vw, 48px);
+    }
+
+    .study-cta p {
+        margin: 38px 0 42px;
+        font-size: 17px;
+    }
+
+    .study-cta-primary,
+    .study-cta-login {
+        min-height: 62px;
+        font-size: 17px;
+    }
+
+    .study-cta-primary {
+        min-width: 210px;
+    }
+
+    .study-cta-login {
+        min-width: 116px;
     }
 }
